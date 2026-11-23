@@ -37,7 +37,7 @@ Path=$DIR
 Icon=must-have
 Terminal=false
 Categories=Office;Finance;
-StartupWMClass=$APP_ID
+StartupWMClass=MustHave
 StartupNotify=true
 $extra
 Keywords=must;have;финансы;план;цели;деньги;заработок;

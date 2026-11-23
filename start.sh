@@ -5,10 +5,24 @@ set -euo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/must-have"
-mkdir -p "$STATE_DIR"
+DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/must-have"
+PROFILE_ROOT="$DATA_DIR/chrome-profile"
+mkdir -p "$STATE_DIR" "$PROFILE_ROOT/Default"
 LOG="$STATE_DIR/server.log"
 URL_FILE="$STATE_DIR/url"
 PORT=""
+
+# Must Have должен быть отдельным процессом Chrome, иначе он наследует
+# класс окна соседнего Chrome-приложения (например, Still Standing) и
+# группируется с ним в доке. Профиль отдельный; при первом запуске переносим
+# Local Storage из основного профиля, чтобы не потерять существующие данные.
+if [ ! -e "$PROFILE_ROOT/.localstorage-migrated" ]; then
+  DEFAULT_STORAGE="$HOME/.config/google-chrome/Default/Local Storage"
+  if [ -d "$DEFAULT_STORAGE" ] && [ ! -e "$PROFILE_ROOT/Default/Local Storage/leveldb" ]; then
+    cp -a "$DEFAULT_STORAGE" "$PROFILE_ROOT/Default/"
+  fi
+  touch "$PROFILE_ROOT/.localstorage-migrated"
+fi
 
 if ! command -v python3 >/dev/null 2>&1; then
   MSG="Не найден python3. Установите Python 3 и запустите снова."
@@ -57,12 +71,16 @@ printf '%s\n' "$URL" > "$URL_FILE"
 for CANDIDATE in google-chrome google-chrome-stable chromium chromium-browser microsoft-edge brave-browser; do
   if command -v "$CANDIDATE" >/dev/null 2>&1; then
     exec "$CANDIDATE" \
+      --ozone-platform=x11 \
+      --user-data-dir="$PROFILE_ROOT" \
+      --profile-directory=Default \
       --app="$URL" \
       --class=MustHave \
       --window-size=1440,960 \
       --disable-popup-blocking \
       --no-first-run \
-      --no-default-browser-check >/dev/null 2>&1
+      --no-default-browser-check \
+      --disable-background-networking >/dev/null 2>&1
   fi
 done
 
