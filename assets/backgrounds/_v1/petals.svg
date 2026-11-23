@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f1e6"/>
+      <stop offset=".55" stop-color="#f6eee3"/>
+      <stop offset="1" stop-color="#eee4d5"/>
+    </linearGradient>
+    <radialGradient id="blush" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#dca08f" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#dca08f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moon" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#f0dcb4" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#f0dcb4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="wash" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <g id="blossom">
+      <g fill="currentColor">
+        <ellipse cx="0" cy="-12" rx="7.5" ry="14"/>
+        <ellipse cx="0" cy="-12" rx="7.5" ry="14" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-12" rx="7.5" ry="14" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-12" rx="7.5" ry="14" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-12" rx="7.5" ry="14" transform="rotate(288)"/>
+      </g>
+      <circle cx="0" cy="0" r="4" fill="#e3b39b"/>
+      <circle cx="0" cy="0" r="1.4" fill="#a95d4c"/>
+    </g>
+    <path id="petal" d="M0 0 C 8 -7 18 -4 20 5 C 14 13 3 12 0 0Z"/>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#paper)"/>
+  <circle cx="1120" cy="232" r="300" fill="url(#moon)"/>
+  <circle cx="1120" cy="232" r="102" fill="#efdbb4" opacity=".38"/>
+
+  <g filter="url(#wash)" opacity=".7">
+    <ellipse cx="1150" cy="500" rx="170" ry="260" fill="url(#blush)"/>
+    <ellipse cx="760" cy="700" rx="230" ry="190" fill="#cdd5bb" opacity=".24"/>
+    <ellipse cx="1370" cy="780" rx="210" ry="160" fill="#d8a793" opacity=".16"/>
+  </g>
+
+  <path d="M0 884 C 210 842 410 872 602 894 C 814 918 1010 882 1214 886 C 1368 890 1500 912 1600 900 L1600 1000 L0 1000Z" fill="#d9ddc6" opacity=".38"/>
+  <path d="M0 930 C 250 904 470 928 700 944 C 940 960 1180 926 1420 936 C 1500 940 1560 934 1600 928 L1600 1000 L0 1000Z" fill="#c6cdb2" opacity=".42"/>
+
+  <g fill="none" stroke="#6d655a" stroke-linecap="round">
+    <path d="M1600 96 C 1468 156 1392 204 1290 250 C 1196 292 1100 314 990 326" stroke-width="13" opacity=".72"/>
+    <path d="M1392 206 C 1362 276 1346 340 1350 424" stroke-width="6" opacity=".6"/>
+    <path d="M1290 250 C 1252 306 1222 360 1206 430" stroke-width="5" opacity=".55"/>
+    <path d="M1180 292 C 1130 282 1086 282 1042 294" stroke-width="4" opacity=".55"/>
+    <path d="M1362 310 C 1408 300 1450 306 1490 328" stroke-width="3.5" opacity=".5"/>
+    <path d="M1290 250 C 1288 206 1300 168 1322 132" stroke-width="4" opacity=".45"/>
+    <path d="M1100 314 C 1060 348 1032 382 1014 424" stroke-width="3" opacity=".42"/>
+    <path d="M1500 332 C 1524 372 1538 414 1538 456" stroke-width="3" opacity=".38"/>
+  </g>
+
+  <g class="blossoms">
+    <g transform="translate(1274 238) scale(1.25)"><use href="#blossom" style="color:#b95851" opacity=".92"/></g>
+    <g transform="translate(1348 290) scale(1.05)"><use href="#blossom" style="color:#c96b60" opacity=".85"/></g>
+    <g transform="translate(1206 310) scale(.95)"><use href="#blossom" style="color:#a94f4a" opacity=".9"/></g>
+    <g transform="translate(1140 286) scale(.8)"><use href="#blossom" style="color:#d17a6b" opacity=".85"/></g>
+    <g transform="translate(1378 372) scale(1.15)"><use href="#blossom" style="color:#b55750" opacity=".82"/></g>
+    <g transform="translate(1300 434) scale(.88)"><use href="#blossom" style="color:#c46a5e" opacity=".9"/></g>
+    <g transform="translate(1050 300) scale(.7)"><use href="#blossom" style="color:#ad514a" opacity=".8"/></g>
+    <g transform="translate(1460 322) scale(.78)"><use href="#blossom" style="color:#cf7566" opacity=".7"/></g>
+    <g transform="translate(1018 416) scale(.72)"><use href="#blossom" style="color:#bc5c53" opacity=".78"/></g>
+    <g transform="translate(1234 268) scale(.66)"><use href="#blossom" style="color:#df927c" opacity=".8"/></g>
+    <g transform="translate(1410 270) scale(.6)"><use href="#blossom" style="color:#a94e48" opacity=".72"/></g>
+    <g transform="translate(1330 210) scale(.55)"><use href="#blossom" style="color:#c56a5d" opacity=".7"/></g>
+    <g transform="translate(1510 406) scale(.52)"><use href="#blossom" style="color:#d58977" opacity=".6"/></g>
+    <g transform="translate(1122 380) scale(.6)"><use href="#blossom" style="color:#b75a52" opacity=".65"/></g>
+  </g>
+
+  <g fill="#b95851" opacity=".88">
+    <path d="M1408 226 q 14 -12 27 0 q -13 15 -27 0Z"/>
+    <path d="M1266 300 q 12 -10 24 1 q -12 13 -24 -1Z"/>
+    <path d="M1188 344 q 10 -9 20 0 q -10 12 -20 0Z"/>
+    <path d="M1450 352 q 11 -9 22 1 q -11 11 -22 -1Z"/>
+    <path d="M1308 468 q 10 -8 20 1 q -10 10 -20 -1Z"/>
+  </g>
+
+  <g fill="none" stroke="#8ea478" stroke-linecap="round">
+    <path d="M1500 1000 C 1466 900 1478 818 1448 744" stroke-width="4" opacity=".55"/>
+    <path d="M1554 1000 C 1532 916 1546 848 1524 790" stroke-width="3" opacity=".42"/>
+    <path d="M1462 886 q -38 -24 -72 -22" stroke-width="2.6" opacity=".45"/>
+    <path d="M1488 842 q 32 -28 66 -34" stroke-width="2.4" opacity=".4"/>
+    <g fill="#a4b78e" stroke="none" opacity=".62">
+      <path d="M1462 886 q -44 -36 -84 -28 q 40 42 84 28Z"/>
+      <path d="M1488 842 q 30 -40 74 -40 q -34 48 -74 40Z"/>
+      <path d="M1452 800 q -30 -42 -72 -44 q 30 50 72 44Z"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#7e9171" stroke-linecap="round" opacity=".36">
+    <path d="M120 1000 C 136 916 126 850 152 788" stroke-width="3"/>
+    <path d="M204 1000 C 190 930 202 880 184 830" stroke-width="2.4"/>
+    <g fill="#94a981" stroke="none" opacity=".6">
+      <path d="M152 788 q -24 -38 -58 -48 q 24 46 58 48Z"/>
+      <path d="M184 830 q 20 -36 56 -48 q -18 46 -56 48Z"/>
+    </g>
+  </g>
+
+  <g class="falling-petals" fill="#c56a5d">
+    <g transform="translate(1180 330)"><use href="#petal" class="fall p1" style="--drift: 70px; animation-delay: -2s; animation-duration: 22s"/></g>
+    <g transform="translate(1320 380) scale(.8)"><use href="#petal" class="fall p2" style="--drift: -55px; animation-delay: -9s; animation-duration: 28s"/></g>
+    <g transform="translate(1040 420) scale(.7)"><use href="#petal" class="fall p3" style="--drift: 100px; animation-delay: -16s; animation-duration: 25s"/></g>
+    <g transform="translate(1450 342) scale(.9)"><use href="#petal" class="fall p4" style="--drift: -80px; animation-delay: -5s; animation-duration: 31s"/></g>
+    <g transform="translate(1250 290) scale(.65)"><use href="#petal" class="fall p5" style="--drift: 40px; animation-delay: -20s; animation-duration: 27s"/></g>
+    <g transform="translate(1510 430) scale(.75)"><use href="#petal" class="fall p6" style="--drift: -110px; animation-delay: -12s; animation-duration: 34s"/></g>
+    <g transform="translate(1120 360) scale(.6)"><use href="#petal" class="fall p7" style="--drift: 85px; animation-delay: -24s; animation-duration: 24s"/></g>
+    <g transform="translate(1380 470) scale(.8)"><use href="#petal" class="fall p8" style="--drift: -45px; animation-delay: -7s; animation-duration: 29s"/></g>
+    <g transform="translate(1200 500) scale(.55)"><use href="#petal" class="fall p9" style="--drift: 60px; animation-delay: -18s; animation-duration: 26s"/></g>
+  </g>
+
+  <g fill="none" stroke="#897f6f" stroke-width="1.3" stroke-linecap="round" opacity=".38">
+    <path d="M446 244 q 8 -6 16 0 q 8 -6 16 0"/>
+    <path d="M506 278 q 6 -5 12 0 q 6 -5 12 0"/>
+  </g>
+
+  <style>
+    .fall { animation-name: petal-fall; animation-timing-function: linear; animation-iteration-count: infinite; transform-box: fill-box; transform-origin: center; }
+    .blossoms use { animation: blossom-breathe 11s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .blossoms use:nth-child(2n) { animation-delay: -3s; animation-duration: 14s; }
+    .blossoms use:nth-child(3n) { animation-delay: -6s; animation-duration: 17s; }
+
+    @keyframes petal-fall {
+      0% { transform: translate(0, -80px) rotate(0deg); opacity: 0; }
+      8% { opacity: .9; }
+      85% { opacity: .65; }
+      100% { transform: translate(var(--drift), 660px) rotate(620deg); opacity: 0; }
+    }
+    @keyframes blossom-breathe {
+      0%, 100% { transform: translate(0, 0) rotate(-1deg); }
+      50% { transform: translate(2px, -3px) rotate(1.2deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fall, .blossoms use { animation: none !important; }
+    }
+  </style>
+</svg>

@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation=".7"/></filter>
+  <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.6"/></filter>
+  <filter id="wash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="mist" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="12"/></filter>
+  <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#879c68" stop-opacity=".85"/><stop offset="1" stop-color="#c2cda2" stop-opacity=".7"/></linearGradient>
+  <linearGradient id="petalGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8f3137"/><stop offset=".55" stop-color="#c75f59"/><stop offset="1" stop-color="#e2a18f"/></linearGradient>
+  <linearGradient id="foamGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f7f4e8" stop-opacity="0"/><stop offset=".25" stop-color="#f7f4e8" stop-opacity=".85"/><stop offset=".7" stop-color="#eef2e7" stop-opacity=".65"/><stop offset="1" stop-color="#eef2e7" stop-opacity="0"/></linearGradient>
+  <linearGradient id="mistGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#faf6eb" stop-opacity="0"/><stop offset=".35" stop-color="#faf6eb" stop-opacity=".62"/><stop offset=".7" stop-color="#faf6eb" stop-opacity=".5"/><stop offset="1" stop-color="#faf6eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="greenWash" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#91a872" stop-opacity=".20"/><stop offset="1" stop-color="#91a872" stop-opacity="0"/></radialGradient>
+  <radialGradient id="redWash" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#b5474b" stop-opacity=".18"/><stop offset="1" stop-color="#b5474b" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+  .fall { animation-name: fall; animation-timing-function: linear; animation-iteration-count: infinite; transform-box: fill-box; transform-origin: center; }
+  .mote { animation: mote 14s ease-in-out infinite; }
+  .rainline { animation-name: rainfall; animation-timing-function: linear; animation-iteration-count: infinite; }
+  .ripple { transform-box: view-box; animation: ripple 8s ease-out infinite; }
+  .foamline { animation: foam 14s ease-in-out infinite; }
+  .glint { animation: glint 8s ease-in-out infinite; }
+  .mistband { animation: mistdrift 30s ease-in-out infinite; }
+  .bird { animation: birddrift 20s ease-in-out infinite; }
+  .washfloat { animation: washfloat 24s ease-in-out infinite; }
+  .hatch { animation: hatchfade 16s ease-in-out infinite; }
+  @keyframes fall {
+    0% { transform: translate(0, -90px) rotate(0deg); opacity: 0; }
+    8% { opacity: .85; }
+    78% { opacity: .6; }
+    100% { transform: translate(var(--dx), 820px) rotate(var(--rot)); opacity: 0; }
+  }
+  @keyframes mote {
+    0%, 100% { transform: translate(0, 0); opacity: .1; }
+    50% { transform: translate(14px, -22px); opacity: .55; }
+  }
+  @keyframes rainfall {
+    0% { transform: translate(0, -40px); opacity: 0; }
+    10% { opacity: .7; }
+    80% { opacity: .35; }
+    100% { transform: translate(-14px, 260px); opacity: 0; }
+  }
+  @keyframes ripple {
+    0% { transform: scale(.32); opacity: 0; }
+    12% { opacity: .75; }
+    72% { opacity: .22; }
+    100% { transform: scale(1.15); opacity: 0; }
+  }
+  @keyframes foam {
+    0%, 100% { transform: translateX(-18px); opacity: .3; }
+    50% { transform: translateX(18px); opacity: .72; }
+  }
+  @keyframes glint {
+    0%, 100% { opacity: .08; transform: scale(.8); }
+    45% { opacity: .7; transform: scale(1.12); }
+  }
+  @keyframes mistdrift {
+    0% { transform: translateX(-80px); opacity: .3; }
+    50% { opacity: .65; }
+    100% { transform: translateX(90px); opacity: .3; }
+  }
+  @keyframes birddrift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -8px); }
+  }
+  @keyframes washfloat {
+    0%, 100% { transform: translate(0, 0) scale(.96); opacity: .035; }
+    50% { transform: translate(16px, -10px) scale(1.06); opacity: .085; }
+  }
+  @keyframes hatchfade {
+    0%, 100% { opacity: .03; }
+    45% { opacity: .22; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fall, .mote, .rainline, .ripple, .foamline, .glint, .mistband, .bird, .washfloat, .hatch { animation: none !important; }
+  }
+</style>
+<ellipse cx="880" cy="520" rx="400" ry="270" fill="#4f8b91" opacity=".05" filter="url(#wash)"/>
+<line class="rainline" x1="327" y1="168" x2="317" y2="231" stroke="#f0f6ef" stroke-width="1.9" opacity="0.40" style="animation-duration:2.5s;animation-delay:-1.4s" filter="url(#soft)"/>
+<line class="rainline" x1="747" y1="1" x2="737" y2="90" stroke="#f0f6ef" stroke-width="1.3" opacity="0.47" style="animation-duration:1.9s;animation-delay:-0.2s" filter="url(#soft)"/>
+<line class="rainline" x1="1170" y1="360" x2="1160" y2="510" stroke="#f0f6ef" stroke-width="1.4" opacity="0.21" style="animation-duration:3.0s;animation-delay:-1.8s" filter="url(#soft)"/>
+<line class="rainline" x1="903" y1="114" x2="893" y2="197" stroke="#f0f6ef" stroke-width="2.0" opacity="0.46" style="animation-duration:2.9s;animation-delay:-1.9s" filter="url(#soft)"/>
+<line class="rainline" x1="1199" y1="-18" x2="1189" y2="131" stroke="#f0f6ef" stroke-width="1.5" opacity="0.25" style="animation-duration:2.0s;animation-delay:-1.1s" filter="url(#soft)"/>
+<line class="rainline" x1="1372" y1="447" x2="1362" y2="525" stroke="#f0f6ef" stroke-width="1.6" opacity="0.39" style="animation-duration:1.9s;animation-delay:-0.9s" filter="url(#soft)"/>
+<line class="rainline" x1="741" y1="464" x2="731" y2="528" stroke="#f0f6ef" stroke-width="2.1" opacity="0.28" style="animation-duration:2.2s;animation-delay:-0.8s" filter="url(#soft)"/>
+<line class="rainline" x1="853" y1="596" x2="843" y2="679" stroke="#f0f6ef" stroke-width="1.4" opacity="0.36" style="animation-duration:2.0s;animation-delay:-1.2s" filter="url(#soft)"/>
+<line class="rainline" x1="1259" y1="494" x2="1249" y2="623" stroke="#f0f6ef" stroke-width="1.6" opacity="0.45" style="animation-duration:2.3s;animation-delay:-2.4s" filter="url(#soft)"/>
+<line class="rainline" x1="225" y1="374" x2="215" y2="479" stroke="#f0f6ef" stroke-width="2.0" opacity="0.22" style="animation-duration:1.6s;animation-delay:-2.5s" filter="url(#soft)"/>
+<line class="rainline" x1="443" y1="444" x2="433" y2="534" stroke="#f0f6ef" stroke-width="1.3" opacity="0.45" style="animation-duration:2.1s;animation-delay:-0.3s" filter="url(#soft)"/>
+<line class="rainline" x1="1159" y1="305" x2="1149" y2="409" stroke="#f0f6ef" stroke-width="1.6" opacity="0.38" style="animation-duration:1.7s;animation-delay:-2.9s" filter="url(#soft)"/>
+<line class="rainline" x1="168" y1="468" x2="158" y2="545" stroke="#f0f6ef" stroke-width="1.9" opacity="0.26" style="animation-duration:2.8s;animation-delay:-2.1s" filter="url(#soft)"/>
+<line class="rainline" x1="146" y1="119" x2="136" y2="231" stroke="#f0f6ef" stroke-width="1.1" opacity="0.36" style="animation-duration:1.6s;animation-delay:-0.5s" filter="url(#soft)"/>
+<line class="rainline" x1="285" y1="430" x2="275" y2="580" stroke="#f0f6ef" stroke-width="1.9" opacity="0.48" style="animation-duration:2.3s;animation-delay:-1.9s" filter="url(#soft)"/>
+<line class="rainline" x1="1008" y1="407" x2="998" y2="475" stroke="#f0f6ef" stroke-width="2.0" opacity="0.42" style="animation-duration:2.6s;animation-delay:-1.1s" filter="url(#soft)"/>
+<line class="rainline" x1="1286" y1="185" x2="1276" y2="260" stroke="#f0f6ef" stroke-width="1.5" opacity="0.38" style="animation-duration:1.4s;animation-delay:-1.6s" filter="url(#soft)"/>
+<line class="rainline" x1="390" y1="564" x2="380" y2="712" stroke="#f0f6ef" stroke-width="1.2" opacity="0.25" style="animation-duration:2.5s;animation-delay:-2.2s" filter="url(#soft)"/>
+<line class="rainline" x1="430" y1="280" x2="420" y2="426" stroke="#f0f6ef" stroke-width="2.1" opacity="0.27" style="animation-duration:1.6s;animation-delay:-0.7s" filter="url(#soft)"/>
+<line class="rainline" x1="409" y1="-57" x2="399" y2="38" stroke="#f0f6ef" stroke-width="1.5" opacity="0.37" style="animation-duration:2.8s;animation-delay:-1.9s" filter="url(#soft)"/>
+<line class="rainline" x1="280" y1="457" x2="270" y2="540" stroke="#f0f6ef" stroke-width="1.1" opacity="0.44" style="animation-duration:1.5s;animation-delay:-1.2s" filter="url(#soft)"/>
+<line class="rainline" x1="456" y1="421" x2="446" y2="562" stroke="#f0f6ef" stroke-width="1.6" opacity="0.40" style="animation-duration:2.1s;animation-delay:-2.4s" filter="url(#soft)"/>
+<line class="rainline" x1="549" y1="156" x2="539" y2="230" stroke="#f0f6ef" stroke-width="1.3" opacity="0.39" style="animation-duration:1.9s;animation-delay:-0.2s" filter="url(#soft)"/>
+<line class="rainline" x1="1362" y1="246" x2="1352" y2="313" stroke="#f0f6ef" stroke-width="2.0" opacity="0.28" style="animation-duration:1.5s;animation-delay:-0.5s" filter="url(#soft)"/>
+<line class="rainline" x1="1474" y1="-50" x2="1464" y2="45" stroke="#f0f6ef" stroke-width="2.2" opacity="0.38" style="animation-duration:2.8s;animation-delay:-0.0s" filter="url(#soft)"/>
+<line class="rainline" x1="1394" y1="158" x2="1384" y2="274" stroke="#f0f6ef" stroke-width="2.1" opacity="0.30" style="animation-duration:2.4s;animation-delay:-0.4s" filter="url(#soft)"/>
+<line class="rainline" x1="1451" y1="-71" x2="1441" y2="78" stroke="#f0f6ef" stroke-width="2.0" opacity="0.25" style="animation-duration:2.1s;animation-delay:-2.0s" filter="url(#soft)"/>
+<line class="rainline" x1="1311" y1="484" x2="1301" y2="626" stroke="#f0f6ef" stroke-width="1.3" opacity="0.34" style="animation-duration:2.1s;animation-delay:-2.7s" filter="url(#soft)"/>
+<line class="rainline" x1="608" y1="458" x2="598" y2="538" stroke="#f0f6ef" stroke-width="1.6" opacity="0.34" style="animation-duration:2.0s;animation-delay:-2.5s" filter="url(#soft)"/>
+<line class="rainline" x1="318" y1="471" x2="308" y2="555" stroke="#f0f6ef" stroke-width="1.2" opacity="0.45" style="animation-duration:2.3s;animation-delay:-1.1s" filter="url(#soft)"/>
+<line class="rainline" x1="1403" y1="591" x2="1393" y2="718" stroke="#f0f6ef" stroke-width="1.5" opacity="0.21" style="animation-duration:1.8s;animation-delay:-0.5s" filter="url(#soft)"/>
+<line class="rainline" x1="523" y1="-25" x2="513" y2="101" stroke="#f0f6ef" stroke-width="1.5" opacity="0.26" style="animation-duration:2.3s;animation-delay:-2.7s" filter="url(#soft)"/>
+<line class="rainline" x1="1265" y1="-80" x2="1255" y2="47" stroke="#f0f6ef" stroke-width="1.7" opacity="0.23" style="animation-duration:2.0s;animation-delay:-2.5s" filter="url(#soft)"/>
+<line class="rainline" x1="145" y1="567" x2="135" y2="635" stroke="#f0f6ef" stroke-width="1.7" opacity="0.25" style="animation-duration:1.6s;animation-delay:-0.2s" filter="url(#soft)"/>
+<line class="rainline" x1="680" y1="341" x2="670" y2="474" stroke="#f0f6ef" stroke-width="2.2" opacity="0.29" style="animation-duration:2.5s;animation-delay:-2.4s" filter="url(#soft)"/>
+<line class="rainline" x1="1528" y1="-27" x2="1518" y2="62" stroke="#f0f6ef" stroke-width="1.4" opacity="0.29" style="animation-duration:2.8s;animation-delay:-2.1s" filter="url(#soft)"/>
+<line class="rainline" x1="528" y1="168" x2="518" y2="235" stroke="#f0f6ef" stroke-width="2.1" opacity="0.45" style="animation-duration:1.6s;animation-delay:-1.0s" filter="url(#soft)"/>
+<line class="rainline" x1="270" y1="25" x2="260" y2="141" stroke="#f0f6ef" stroke-width="1.4" opacity="0.24" style="animation-duration:2.9s;animation-delay:-2.9s" filter="url(#soft)"/>
+<line class="rainline" x1="847" y1="282" x2="837" y2="359" stroke="#f0f6ef" stroke-width="2.1" opacity="0.35" style="animation-duration:2.9s;animation-delay:-1.0s" filter="url(#soft)"/>
+<line class="rainline" x1="807" y1="-39" x2="797" y2="80" stroke="#f0f6ef" stroke-width="1.2" opacity="0.26" style="animation-duration:3.1s;animation-delay:-1.6s" filter="url(#soft)"/>
+<line class="rainline" x1="529" y1="237" x2="519" y2="368" stroke="#f0f6ef" stroke-width="2.0" opacity="0.48" style="animation-duration:1.6s;animation-delay:-0.2s" filter="url(#soft)"/>
+<line class="rainline" x1="272" y1="492" x2="262" y2="613" stroke="#f0f6ef" stroke-width="1.8" opacity="0.31" style="animation-duration:2.0s;animation-delay:-0.5s" filter="url(#soft)"/>
+<line class="rainline" x1="462" y1="309" x2="452" y2="385" stroke="#f0f6ef" stroke-width="1.8" opacity="0.33" style="animation-duration:3.0s;animation-delay:-1.9s" filter="url(#soft)"/>
+<line class="rainline" x1="139" y1="324" x2="129" y2="471" stroke="#f0f6ef" stroke-width="1.3" opacity="0.32" style="animation-duration:2.2s;animation-delay:-2.7s" filter="url(#soft)"/>
+<g class="ripple" style="transform-origin:1000px 520px;animation-delay:0s;animation-duration:8s">
+<ellipse cx="1000" cy="520" rx="34" ry="9" fill="none" stroke="#e9f2e8" stroke-width="1.5" opacity="0.6"/>
+<ellipse cx="1000" cy="520" rx="78" ry="21" fill="none" stroke="#e9f2e8" stroke-width="1.4" opacity="0.4"/>
+<ellipse cx="1000" cy="520" rx="136" ry="36" fill="none" stroke="#e9f2e8" stroke-width="1.2" opacity="0.26"/>
+<ellipse cx="1000" cy="520" rx="205" ry="54" fill="none" stroke="#e9f2e8" stroke-width="1.1" opacity="0.16"/>
+</g>
+<g class="ripple" style="transform-origin:370px 760px;animation-delay:-2.6s;animation-duration:9.2s">
+<ellipse cx="370" cy="760" rx="27" ry="7" fill="none" stroke="#e9f2e8" stroke-width="1.5" opacity="0.6"/>
+<ellipse cx="370" cy="760" rx="62" ry="17" fill="none" stroke="#e9f2e8" stroke-width="1.4" opacity="0.4"/>
+<ellipse cx="370" cy="760" rx="109" ry="29" fill="none" stroke="#e9f2e8" stroke-width="1.2" opacity="0.26"/>
+<ellipse cx="370" cy="760" rx="164" ry="43" fill="none" stroke="#e9f2e8" stroke-width="1.1" opacity="0.16"/>
+</g>
+<g class="ripple" style="transform-origin:1240px 730px;animation-delay:-5.2s;animation-duration:10.5s">
+<ellipse cx="1240" cy="730" rx="20" ry="5" fill="none" stroke="#e9f2e8" stroke-width="1.5" opacity="0.6"/>
+<ellipse cx="1240" cy="730" rx="47" ry="13" fill="none" stroke="#e9f2e8" stroke-width="1.4" opacity="0.4"/>
+<ellipse cx="1240" cy="730" rx="82" ry="22" fill="none" stroke="#e9f2e8" stroke-width="1.2" opacity="0.26"/>
+<ellipse cx="1240" cy="730" rx="123" ry="32" fill="none" stroke="#e9f2e8" stroke-width="1.1" opacity="0.16"/>
+</g>
+<g class="ripple" style="transform-origin:720px 820px;animation-delay:-6.4s;animation-duration:11s">
+<ellipse cx="720" cy="820" rx="15" ry="4" fill="none" stroke="#e9f2e8" stroke-width="1.5" opacity="0.6"/>
+<ellipse cx="720" cy="820" rx="35" ry="9" fill="none" stroke="#e9f2e8" stroke-width="1.4" opacity="0.4"/>
+<ellipse cx="720" cy="820" rx="61" ry="16" fill="none" stroke="#e9f2e8" stroke-width="1.2" opacity="0.26"/>
+<ellipse cx="720" cy="820" rx="92" ry="24" fill="none" stroke="#e9f2e8" stroke-width="1.1" opacity="0.16"/>
+</g>
+<circle class="glint" cx="1468" cy="505" r="2.9" fill="#f4f7ec" style="animation-delay:-0.9s"/>
+<circle class="glint" cx="988" cy="885" r="2.6" fill="#f4f7ec" style="animation-delay:-1.7s"/>
+<circle class="glint" cx="1027" cy="825" r="1.7" fill="#f4f7ec" style="animation-delay:-1.0s"/>
+<circle class="glint" cx="390" cy="799" r="2.6" fill="#f4f7ec" style="animation-delay:-4.3s"/>
+<circle class="glint" cx="1260" cy="852" r="1.6" fill="#f4f7ec" style="animation-delay:-6.3s"/>
+<circle class="glint" cx="875" cy="729" r="2.2" fill="#f4f7ec" style="animation-delay:-1.4s"/>
+<circle class="glint" cx="891" cy="841" r="2.9" fill="#f4f7ec" style="animation-delay:-4.5s"/>
+<circle class="glint" cx="930" cy="634" r="2.6" fill="#f4f7ec" style="animation-delay:-1.7s"/>
+<circle class="glint" cx="560" cy="615" r="2.4" fill="#f4f7ec" style="animation-delay:-2.2s"/>
+<circle class="glint" cx="656" cy="793" r="1.3" fill="#f4f7ec" style="animation-delay:-7.4s"/>
+</svg>

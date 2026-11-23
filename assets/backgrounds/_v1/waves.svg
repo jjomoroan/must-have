@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f1e5"/>
+      <stop offset=".6" stop-color="#edf1e8"/>
+      <stop offset="1" stop-color="#dfeae7"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8bb4b8"/>
+      <stop offset=".5" stop-color="#5d929d"/>
+      <stop offset="1" stop-color="#3f7484"/>
+    </linearGradient>
+    <linearGradient id="wave-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c3dbd5"/>
+      <stop offset="1" stop-color="#8db8ba"/>
+    </linearGradient>
+    <linearGradient id="wave-dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#568895"/>
+      <stop offset="1" stop-color="#376b7c"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#eed5a7" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#eed5a7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1140" cy="228" r="190" fill="url(#sun)"/>
+  <circle cx="1140" cy="228" r="84" fill="#eed6a8" opacity=".5"/>
+
+  <g class="clouds" fill="#fbf7ec" opacity=".62">
+    <path d="M160 248 q 14 -52 72 -44 q 30 -38 80 -16 q 34 -14 64 12 q 54 -2 58 38 q 10 28 -31 35 l-211 4 q -38 -4 -32 -29Z"/>
+    <path d="M1240 378 q 13 -39 57 -34 q 22 -27 58 -10 q 38 -5 44 30 q 3 24 -25 28 l-111 2 q -28 -3 -23 -16Z" opacity=".55"/>
+  </g>
+
+  <g fill="none" stroke="#7a8b7f" stroke-width="1.7" stroke-linecap="round" opacity=".35">
+    <path d="M676 200 q 10 -8 20 0 q 10 -8 20 0"/>
+    <path d="M726 230 q 8 -6 16 0 q 8 -6 16 0"/>
+    <path d="M642 250 q 7 -5 14 0 q 7 -5 14 0"/>
+  </g>
+
+  <path d="M0 566 C 220 538 444 566 664 584 C 906 604 1104 566 1326 572 C 1446 576 1528 558 1600 552 L1600 1000 L0 1000Z" fill="url(#sea)"/>
+  <path d="M0 604 C 210 576 420 606 638 622 C 876 640 1084 600 1300 610 C 1442 616 1532 598 1600 590 L1600 660 C 1500 672 1414 682 1288 674 C 1090 660 902 700 690 684 C 468 666 226 636 0 664Z" fill="#a6c8c4" opacity=".52"/>
+
+  <g class="swell swell-back">
+    <path d="M-120 710 C 80 660 262 676 436 708 C 608 740 776 700 944 686 C 1132 670 1300 696 1464 728 C 1540 744 1620 738 1720 722 L1720 1000 L-120 1000Z" fill="url(#wave-light)"/>
+    <path d="M-120 708 C 80 660 262 676 436 708 C 608 740 776 700 944 686 C 1132 670 1300 696 1464 728 C 1540 744 1620 738 1720 722" fill="none" stroke="#e4eee7" stroke-width="9" opacity=".72"/>
+    <g fill="none" stroke="#f0f5ed" stroke-width="3" stroke-linecap="round" opacity=".6">
+      <path d="M120 686 q 34 -8 68 2"/>
+      <path d="M320 694 q 32 -7 65 3"/>
+      <path d="M520 700 q 33 -7 66 4"/>
+      <path d="M720 690 q 34 -8 68 2"/>
+      <path d="M920 678 q 32 -7 64 3"/>
+      <path d="M1120 688 q 32 -7 64 4"/>
+      <path d="M1320 704 q 32 -6 64 4"/>
+      <path d="M1490 716 q 30 -5 60 4"/>
+    </g>
+  </g>
+
+  <g class="swell swell-mid">
+    <path d="M-120 806 C 80 766 280 782 466 808 C 650 834 836 798 1024 790 C 1212 782 1400 816 1580 838 C 1640 846 1690 842 1720 836 L1720 1000 L-120 1000Z" fill="url(#wave-dark)" opacity=".88"/>
+    <path d="M-120 804 C 80 766 280 782 466 808 C 650 834 836 798 1024 790 C 1212 782 1400 816 1580 838 C 1640 846 1690 842 1720 836" fill="none" stroke="#daeae4" stroke-width="6" opacity=".62"/>
+    <g fill="#dcece6" opacity=".55">
+      <circle cx="190" cy="792" r="4"/>
+      <circle cx="238" cy="800" r="2.5"/>
+      <circle cx="560" cy="812" r="3.4"/>
+      <circle cx="611" cy="818" r="2"/>
+      <circle cx="916" cy="798" r="3.2"/>
+      <circle cx="1264" cy="806" r="3"/>
+      <circle cx="1434" cy="824" r="2.4"/>
+    </g>
+  </g>
+
+  <g class="swell swell-front">
+    <path d="M-120 900 C 120 866 320 886 516 908 C 712 930 916 892 1114 892 C 1312 892 1500 918 1720 946 L1720 1000 L-120 1000Z" fill="#2f6374"/>
+    <path d="M-120 898 C 120 866 320 886 516 908 C 712 930 916 892 1114 892 C 1312 892 1500 918 1720 946" fill="none" stroke="#bcdad7" stroke-width="4" opacity=".42"/>
+    <g fill="none" stroke="#8fb9b8" stroke-width="1.5" opacity=".45">
+      <path d="M80 934 q 46 -10 92 0"/>
+      <path d="M380 944 q 52 -10 104 0"/>
+      <path d="M740 930 q 48 -9 96 0"/>
+      <path d="M1100 930 q 46 -8 92 0"/>
+      <path d="M1400 952 q 50 -8 100 0"/>
+    </g>
+  </g>
+
+  <g class="great-wave">
+    <path d="M-120 972 C -58 924 12 884 82 867 C 144 852 196 870 216 908 C 231 938 212 966 180 984 C 122 1014 10 1016 -120 1010Z" fill="#2f6374" opacity=".92"/>
+    <path d="M-120 970 C -58 924 12 884 82 867 C 144 852 196 870 216 908" fill="none" stroke="#e7f1e9" stroke-width="8" opacity=".68"/>
+    <g fill="none" stroke="#f4f7ef" stroke-width="3" stroke-linecap="round" opacity=".8">
+      <path d="M34 914 q 22 -15 46 -12"/>
+      <path d="M92 892 q 22 -12 44 -6"/>
+      <path d="M146 884 q 18 -8 35 0"/>
+    </g>
+    <g fill="#f3f6ed" opacity=".8">
+      <circle cx="52" cy="892" r="2.4"/>
+      <circle cx="116" cy="876" r="2"/>
+      <circle cx="186" cy="890" r="1.8"/>
+    </g>
+  </g>
+
+  <g class="boat">
+    <path d="M852 570 l90 0 l-13 20 l-63 0Z" fill="#4b5f58"/>
+    <path d="M897 568 l0 -84 l48 72Z" fill="#f6f1e5" stroke="#7f8c7f" stroke-width="1.2"/>
+    <path d="M893 568 l0 -66 l-35 58Z" fill="#e4e9dd" stroke="#7f8c7f" stroke-width="1.2"/>
+    <path d="M894 480 v90" stroke="#6e7769" stroke-width="2"/>
+    <path d="M853 592 q 38 8 77 0" fill="none" stroke="#c7ddd7" stroke-width="1.2" opacity=".6"/>
+  </g>
+
+  <g class="clouds" fill="#fbf7ec" opacity=".4">
+    <path d="M256 386 q 12 -33 49 -28 q 21 -24 51 -9 q 34 -4 39 26 q 2 20 -22 23 l-94 2 q -26 -2 -23 -14Z"/>
+  </g>
+
+  <style>
+    .swell { transform-box: view-box; }
+    .swell-back { animation: drift-a 18s ease-in-out infinite; }
+    .swell-mid { animation: drift-b 22s ease-in-out infinite; }
+    .swell-front { animation: drift-a 26s ease-in-out infinite reverse; }
+    .great-wave { animation: wave-breathe 17s ease-in-out infinite; transform-origin: 90px 930px; }
+    .boat { animation: boat-bob 9s ease-in-out infinite; transform-origin: 897px 560px; }
+    .clouds { animation: cloud-drift 30s ease-in-out infinite; }
+    @keyframes drift-a {
+      0%, 100% { transform: translateX(-10px); }
+      50% { transform: translateX(12px); }
+    }
+    @keyframes drift-b {
+      0%, 100% { transform: translateX(9px); }
+      50% { transform: translateX(-11px); }
+    }
+    @keyframes wave-breathe {
+      0%, 100% { transform: translateY(0) rotate(-.3deg); }
+      50% { transform: translateY(4px) rotate(.35deg); }
+    }
+    @keyframes boat-bob {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(5px) rotate(1.2deg); }
+    }
+    @keyframes cloud-drift {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(20px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .swell, .great-wave, .boat, .clouds { animation: none !important; }
+    }
+  </style>
+</svg>

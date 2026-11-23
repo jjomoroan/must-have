@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="air" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f0e5"/>
+      <stop offset=".55" stop-color="#e9eee8"/>
+      <stop offset="1" stop-color="#dfe9e3"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb0b2"/>
+      <stop offset=".46" stop-color="#42818d"/>
+      <stop offset="1" stop-color="#2d6675"/>
+    </linearGradient>
+    <linearGradient id="water-deep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f6d7c" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#1f4e5e" stop-opacity=".68"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".55">
+      <stop offset="0" stop-color="#e7f0e7" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#e7f0e7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#air)"/>
+  <circle cx="360" cy="192" r="235" fill="url(#glow)" opacity=".85"/>
+  <circle cx="360" cy="192" r="82" fill="#e6ddc5" opacity=".45"/>
+
+  <path d="M0 420 C 155 382 255 395 374 420 C 520 450 614 404 754 398 C 912 392 1016 454 1168 430 C 1324 406 1458 360 1600 384 L1600 1000 L0 1000Z" fill="#cfded9" opacity=".58"/>
+  <path d="M0 480 C 188 438 286 480 440 492 C 618 506 716 448 884 456 C 1052 464 1214 520 1370 486 C 1470 464 1532 448 1600 454 L1600 1000 L0 1000Z" fill="#a7c5c2" opacity=".52"/>
+
+  <path d="M0 540 C 140 514 280 548 424 574 C 580 602 704 560 850 566 C 1028 574 1164 624 1310 610 C 1412 600 1510 570 1600 584 L1600 1000 L0 1000Z" fill="url(#water)"/>
+  <path d="M0 756 C 170 724 338 760 512 790 C 692 820 828 792 984 800 C 1168 810 1320 850 1460 830 C 1516 822 1560 812 1600 816 L1600 1000 L0 1000Z" fill="#356f7d" opacity=".52"/>
+  <path d="M0 868 C 190 832 390 866 564 892 C 760 922 942 880 1120 892 C 1310 906 1470 940 1600 916 L1600 1000 L0 1000Z" fill="url(#water-deep)"/>
+
+  <g opacity=".38" fill="none" stroke="#d8e8df" stroke-width="1.4" stroke-linecap="round">
+    <path d="M120 610 q 86 -18 176 -2"/>
+    <path d="M370 668 q 68 -12 138 0"/>
+    <path d="M1100 690 q 92 -16 184 1"/>
+    <path d="M1270 748 q 76 -12 150 0"/>
+    <path d="M210 792 q 56 -10 114 0"/>
+    <path d="M880 854 q 72 -11 145 0"/>
+  </g>
+
+  <g class="ripples">
+    <g class="ripple rp-1" style="transform-origin: 1048px 560px">
+      <ellipse cx="1048" cy="560" rx="52" ry="14" fill="none" stroke="#d5e8e2" stroke-width="2" opacity=".65"/>
+      <ellipse cx="1048" cy="560" rx="108" ry="29" fill="none" stroke="#d5e8e2" stroke-width="2" opacity=".45"/>
+      <ellipse cx="1048" cy="560" rx="178" ry="48" fill="none" stroke="#d5e8e2" stroke-width="1.8" opacity=".32"/>
+      <ellipse cx="1048" cy="560" rx="256" ry="69" fill="none" stroke="#d5e8e2" stroke-width="1.5" opacity=".2"/>
+    </g>
+    <g class="ripple rp-2" style="transform-origin: 376px 790px">
+      <ellipse cx="376" cy="790" rx="44" ry="12" fill="none" stroke="#e4f0e9" stroke-width="2" opacity=".7"/>
+      <ellipse cx="376" cy="790" rx="96" ry="26" fill="none" stroke="#e4f0e9" stroke-width="1.8" opacity=".48"/>
+      <ellipse cx="376" cy="790" rx="158" ry="43" fill="none" stroke="#e4f0e9" stroke-width="1.6" opacity=".3"/>
+      <ellipse cx="376" cy="790" rx="228" ry="62" fill="none" stroke="#e4f0e9" stroke-width="1.4" opacity=".18"/>
+    </g>
+    <g class="ripple rp-3" style="transform-origin: 1210px 814px">
+      <ellipse cx="1210" cy="814" rx="35" ry="10" fill="none" stroke="#d5e8e2" stroke-width="1.8" opacity=".55"/>
+      <ellipse cx="1210" cy="814" rx="78" ry="21" fill="none" stroke="#d5e8e2" stroke-width="1.5" opacity=".35"/>
+      <ellipse cx="1210" cy="814" rx="128" ry="35" fill="none" stroke="#d5e8e2" stroke-width="1.3" opacity=".2"/>
+    </g>
+    <g class="ripple rp-4" style="transform-origin: 760px 700px">
+      <ellipse cx="760" cy="700" rx="24" ry="7" fill="none" stroke="#dcece4" stroke-width="1.5" opacity=".45"/>
+      <ellipse cx="760" cy="700" rx="55" ry="15" fill="none" stroke="#dcece4" stroke-width="1.3" opacity=".26"/>
+      <ellipse cx="760" cy="700" rx="92" ry="25" fill="none" stroke="#dcece4" stroke-width="1.2" opacity=".16"/>
+    </g>
+  </g>
+
+  <g class="ripple-static" fill="none" stroke="#d9ebe3" stroke-linecap="round">
+    <ellipse cx="1048" cy="560" rx="42" ry="11" stroke-width="1.6" opacity=".42"/>
+    <ellipse cx="1048" cy="560" rx="86" ry="23" stroke-width="1.4" opacity=".28"/>
+    <ellipse cx="1048" cy="560" rx="142" ry="38" stroke-width="1.2" opacity=".18"/>
+    <ellipse cx="376" cy="790" rx="38" ry="10" stroke-width="1.8" opacity=".44"/>
+    <ellipse cx="376" cy="790" rx="78" ry="21" stroke-width="1.4" opacity=".3"/>
+    <ellipse cx="376" cy="790" rx="132" ry="36" stroke-width="1.2" opacity=".18"/>
+    <ellipse cx="1210" cy="814" rx="31" ry="9" stroke-width="1.4" opacity=".34"/>
+    <ellipse cx="1210" cy="814" rx="64" ry="18" stroke-width="1.2" opacity=".2"/>
+  </g>
+
+  <g class="splash" fill="#f2f7ee" opacity=".9">
+    <ellipse class="drop-ring dr-1" cx="1048" cy="558" rx="9" ry="3" />
+    <ellipse class="drop-ring dr-2" cx="376" cy="788" rx="8" ry="3" />
+    <circle cx="1046" cy="550" r="2.5"/>
+    <circle cx="1054" cy="545" r="1.8"/>
+    <circle cx="373" cy="780" r="2.2"/>
+  </g>
+
+  <g class="rain" stroke="#eef5ef" stroke-linecap="round" opacity=".72">
+    <line x1="140" y1="80" x2="127" y2="176" stroke-width="1.6" class="rd" style="animation-delay:-.2s;animation-duration:1.9s"/>
+    <line x1="300" y1="20" x2="286" y2="124" stroke-width="1.3" class="rd" style="animation-delay:-1.1s;animation-duration:2.4s"/>
+    <line x1="484" y1="112" x2="470" y2="210" stroke-width="1.5" class="rd" style="animation-delay:-.7s;animation-duration:2.1s"/>
+    <line x1="672" y1="42" x2="658" y2="142" stroke-width="1.2" class="rd" style="animation-delay:-1.7s;animation-duration:2.6s"/>
+    <line x1="842" y1="96" x2="828" y2="196" stroke-width="1.4" class="rd" style="animation-delay:-.4s;animation-duration:2.2s"/>
+    <line x1="1014" y1="16" x2="1000" y2="116" stroke-width="1.2" class="rd" style="animation-delay:-1.9s;animation-duration:2.8s"/>
+    <line x1="1188" y1="108" x2="1174" y2="206" stroke-width="1.5" class="rd" style="animation-delay:-.9s;animation-duration:2s"/>
+    <line x1="1352" y1="36" x2="1338" y2="136" stroke-width="1.2" class="rd" style="animation-delay:-1.3s;animation-duration:2.5s"/>
+    <line x1="1512" y1="140" x2="1498" y2="238" stroke-width="1.4" class="rd" style="animation-delay:-.2s;animation-duration:2.3s"/>
+    <line x1="230" y1="290" x2="216" y2="388" stroke-width="1.2" class="rd" style="animation-delay:-1.5s;animation-duration:2.7s"/>
+    <line x1="580" y1="260" x2="566" y2="358" stroke-width="1.3" class="rd" style="animation-delay:-.6s;animation-duration:2.2s"/>
+    <line x1="930" y1="310" x2="916" y2="408" stroke-width="1.2" class="rd" style="animation-delay:-1.8s;animation-duration:2.9s"/>
+    <line x1="1288" y1="278" x2="1274" y2="376" stroke-width="1.4" class="rd" style="animation-delay:-1s;animation-duration:2.1s"/>
+    <line x1="1460" y1="330" x2="1446" y2="428" stroke-width="1.2" class="rd" style="animation-delay:-.3s;animation-duration:2.6s"/>
+    <line x1="306" y1="470" x2="292" y2="568" stroke-width="2.2" class="rd" style="animation-delay:-1.1s;animation-duration:2.1s"/>
+    <line x1="462" y1="520" x2="448" y2="618" stroke-width="1.8" class="rd" style="animation-delay:-.4s;animation-duration:2.5s"/>
+    <line x1="628" y1="480" x2="614" y2="578" stroke-width="2" class="rd" style="animation-delay:-1.7s;animation-duration:2.2s"/>
+    <line x1="760" y1="548" x2="746" y2="646" stroke-width="1.8" class="rd" style="animation-delay:-.8s;animation-duration:2.7s"/>
+    <line x1="942" y1="500" x2="928" y2="598" stroke-width="2.1" class="rd" style="animation-delay:-2s;animation-duration:2.3s"/>
+    <line x1="1106" y1="540" x2="1092" y2="638" stroke-width="1.8" class="rd" style="animation-delay:-.6s;animation-duration:2.6s"/>
+    <line x1="1300" y1="472" x2="1286" y2="570" stroke-width="2" class="rd" style="animation-delay:-1.4s;animation-duration:2.4s"/>
+    <line x1="1450" y1="530" x2="1436" y2="628" stroke-width="1.7" class="rd" style="animation-delay:-.2s;animation-duration:2.8s"/>
+  </g>
+
+  <g class="lotus" opacity=".85">
+    <path d="M1320 712 q 55 -35 108 0 q -53 34 -108 0Z" fill="#4b7c70"/>
+    <path d="M1334 709 q 40 -23 78 0" fill="none" stroke="#7da18d" stroke-width="1.4" opacity=".6"/>
+    <path d="M1404 690 q 18 -32 46 -38 q -3 39 -46 38Z" fill="#6f9581"/>
+    <path d="M1386 764 q 38 -23 75 2 q -39 19 -75 -2Z" fill="#537f6f" opacity=".72"/>
+  </g>
+
+  <g fill="none" stroke="#d6e9e2" stroke-width="1.2" opacity=".28">
+    <path d="M700 592 q 46 10 84 42"/>
+    <path d="M886 642 q 52 6 94 34"/>
+    <path d="M1140 604 q 42 12 72 40"/>
+  </g>
+
+  <g class="birds" fill="none" stroke="#607a78" stroke-width="1.6" stroke-linecap="round" opacity=".3">
+    <path d="M646 280 q 8 -6 16 0 q 8 -6 16 0"/>
+    <path d="M708 308 q 6 -5 12 0 q 6 -5 12 0"/>
+  </g>
+
+  <style>
+    .rd { animation-name: rainfall; animation-timing-function: linear; animation-iteration-count: infinite; stroke-width: 2; }
+    .ripple { transform-box: view-box; animation: ripple 7.5s ease-out infinite; }
+    .rp-2 { animation-delay: -2.8s; animation-duration: 8.5s; }
+    .rp-3 { animation-delay: -5.1s; animation-duration: 9.4s; }
+    .rp-4 { animation-delay: -3.6s; animation-duration: 10s; }
+    .drop-ring { animation: splash 2.6s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+    .dr-2 { animation-delay: -1.2s; }
+    .lotus { animation: lotus-bob 12s ease-in-out infinite; transform-origin: 1400px 760px; }
+    .birds { animation: birds-drift 20s ease-in-out infinite; }
+
+    @keyframes rainfall {
+      0% { transform: translate(0, 0); opacity: 0; }
+      8% { opacity: .9; }
+      78% { opacity: .55; }
+      100% { transform: translate(-16px, 275px); opacity: 0; }
+    }
+    @keyframes ripple {
+      0% { transform: scale(.35); opacity: 0; }
+      12% { opacity: .85; }
+      70% { opacity: .34; }
+      100% { transform: scale(1.18); opacity: 0; }
+    }
+    @keyframes splash {
+      0%, 100% { transform: scale(.6); opacity: .2; }
+      35% { transform: scale(1.35); opacity: .85; }
+    }
+    @keyframes lotus-bob {
+      0%, 100% { transform: translateY(0) rotate(-.5deg); }
+      50% { transform: translateY(4px) rotate(.7deg); }
+    }
+    @keyframes birds-drift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(14px, -5px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .rd, .ripple, .drop-ring, .lotus, .birds { animation: none !important; }
+    }
+  </style>
+</svg>

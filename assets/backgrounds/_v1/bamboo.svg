@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f0e4"/>
+      <stop offset=".55" stop-color="#edf0e2"/>
+      <stop offset="1" stop-color="#dce5d1"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c3d3b4" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#aebf9f" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fb596" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#91a888" stop-opacity=".1"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#f0d7a6" stop-opacity=".72"/>
+      <stop offset=".65" stop-color="#ecd3a1" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ecd3a1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1190" cy="248" r="210" fill="url(#sun)"/>
+  <circle cx="1190" cy="248" r="105" fill="#f1d9ac" opacity=".55"/>
+
+  <path d="M0 690 C 170 610 280 650 430 700 C 570 746 690 650 840 656 C 1010 664 1120 748 1280 692 C 1410 647 1510 610 1600 634 L1600 1000 L0 1000Z" fill="url(#hill)"/>
+  <path d="M0 790 C 190 710 330 760 520 806 C 680 845 790 764 960 770 C 1140 776 1270 860 1430 800 C 1500 774 1550 760 1600 768 L1600 1000 L0 1000Z" fill="url(#hill2)"/>
+  <path d="M0 895 C 210 845 440 890 640 910 C 880 934 1120 870 1340 900 C 1450 915 1530 908 1600 892 L1600 1000 L0 1000Z" fill="#cddac0" opacity=".33"/>
+
+  <g opacity=".26" fill="none" stroke="#74866d" stroke-width="1.3" stroke-linecap="round">
+    <path d="M120 861 q 55 -16 108 -3"/>
+    <path d="M270 898 q 48 -11 95 1"/>
+    <path d="M1305 850 q 68 -15 132 -2"/>
+    <path d="M1430 927 q 44 -10 89 0"/>
+  </g>
+
+  <g fill="none" stroke="#7d9274" stroke-width="2.2" stroke-linecap="round" opacity=".6">
+    <path d="M298 228 q 11 -9 22 -1 q -10 11 -22 1Z" fill="#8ca180" stroke="none"/>
+    <path d="M356 194 q 13 -8 23 2 q -12 10 -23 -2Z" fill="#8ca180" stroke="none"/>
+    <path d="M424 248 q 12 -9 22 1 q -10 10 -22 -1Z" fill="#8ca180" stroke="none"/>
+    <path d="M281 285 q 7 2 9 8 M341 234 q 7 2 9 8" opacity=".55"/>
+  </g>
+
+  <g class="birds" fill="none" stroke="#6e7867" stroke-width="2" stroke-linecap="round" opacity=".55">
+    <path d="M740 218 q 9 -8 18 0 q 9 -8 18 0"/>
+    <path d="M795 252 q 7 -6 14 0 q 7 -6 14 0"/>
+    <path d="M700 274 q 6 -5 12 0 q 6 -5 12 0"/>
+  </g>
+
+  <g class="bamboo-left" fill="none" stroke-linecap="round">
+    <path d="M176 1000 C 164 760 180 520 158 298" stroke="#6f8964" stroke-width="10" opacity=".8"/>
+    <path d="M176 1000 C 164 760 180 520 158 298" stroke="#a6b895" stroke-width="3" opacity=".55"/>
+    <path d="M112 1000 C 100 790 122 620 104 438" stroke="#7b9370" stroke-width="6" opacity=".62"/>
+    <path d="M266 1000 C 252 790 270 650 258 500" stroke="#829b76" stroke-width="5" opacity=".5"/>
+    <g stroke="#6f8964" stroke-width="2">
+      <path d="M166 842 h21 M169 704 h22 M163 578 h21 M166 454 h21 M161 330 h20"/>
+      <path d="M108 852 h16 M105 716 h16 M110 590 h15 M106 486 h14"/>
+    </g>
+    <g class="frond fl-1">
+      <path d="M168 640 C 118 590 92 542 64 500" stroke="#78926c" stroke-width="2.4"/>
+      <path d="M121 594 q -22 -22 -44 -26 q 24 26 44 26Z" fill="#7e9872" stroke="none"/>
+      <path d="M100 566 q -20 -17 -43 -17 q 21 22 43 17Z" fill="#8aa37d" stroke="none"/>
+      <path d="M84 540 q -16 -15 -38 -16 q 20 20 38 16Z" fill="#718b66" stroke="none"/>
+      <path d="M137 615 q -8 -30 -23 -48 q 3 33 23 48Z" fill="#89a27c" stroke="none"/>
+      <path d="M110 585 q -3 -28 -15 -46 q -2 31 15 46Z" fill="#76906b" stroke="none"/>
+    </g>
+    <g class="frond fl-2">
+      <path d="M162 746 C 115 724 80 690 48 650" stroke="#78926c" stroke-width="2.2"/>
+      <path d="M112 718 q -26 -17 -51 -15 q 25 24 51 15Z" fill="#7e9872" stroke="none"/>
+      <path d="M84 694 q -24 -15 -47 -10 q 23 19 47 10Z" fill="#8aa37d" stroke="none"/>
+      <path d="M124 731 q -12 -25 -31 -38 q 8 27 31 38Z" fill="#718b66" stroke="none"/>
+    </g>
+    <g class="frond fl-3">
+      <path d="M170 500 C 200 436 232 404 286 372" stroke="#78926c" stroke-width="2.2"/>
+      <path d="M216 424 q 17 -27 42 -38 q -12 31 -42 38Z" fill="#849d78" stroke="none"/>
+      <path d="M245 394 q 21 -26 47 -33 q -17 29 -47 33Z" fill="#748e69" stroke="none"/>
+    </g>
+  </g>
+
+  <g class="bamboo-right" fill="none" stroke-linecap="round">
+    <path d="M1348 1000 C 1334 748 1358 506 1338 148" stroke="#5f7c58" stroke-width="16" opacity=".78"/>
+    <path d="M1348 1000 C 1334 748 1358 506 1338 148" stroke="#9eb78c" stroke-width="4" opacity=".6"/>
+    <path d="M1448 1000 C 1432 752 1456 538 1436 252" stroke="#6c8963" stroke-width="12" opacity=".66"/>
+    <path d="M1448 1000 C 1432 752 1456 538 1436 252" stroke="#a8bf95" stroke-width="3" opacity=".45"/>
+    <path d="M1540 1000 C 1528 800 1544 620 1528 410" stroke="#829a76" stroke-width="8" opacity=".52"/>
+    <path d="M1234 1000 C 1222 804 1242 670 1228 546" stroke="#7b9370" stroke-width="6" opacity=".44"/>
+    <g stroke="#5f7c58" stroke-width="2.6" opacity=".8">
+      <path d="M1336 815 h30 M1342 660 h32 M1334 510 h31 M1340 360 h30 M1337 214 h28"/>
+      <path d="M1430 845 h25 M1438 690 h27 M1432 536 h26 M1440 386 h27 M1435 254 h25"/>
+      <path d="M1522 760 h19 M1528 616 h20 M1524 478 h19"/>
+    </g>
+    <g class="frond fr-1">
+      <path d="M1354 510 C 1292 468 1248 420 1206 356" stroke="#688660" stroke-width="3"/>
+      <path d="M1300 468 q -30 -28 -62 -35 q 28 35 62 35Z" fill="#7d9a70" stroke="none"/>
+      <path d="M1272 433 q -31 -24 -64 -27 q 31 32 64 27Z" fill="#8ca57e" stroke="none"/>
+      <path d="M1246 397 q -28 -23 -60 -24 q 30 30 60 24Z" fill="#6f8c64" stroke="none"/>
+      <path d="M1322 491 q -12 -37 -35 -60 q 7 42 35 60Z" fill="#8aa37d" stroke="none"/>
+      <path d="M1288 452 q -7 -38 -27 -63 q 1 43 27 63Z" fill="#748f68" stroke="none"/>
+    </g>
+    <g class="frond fr-2">
+      <path d="M1354 660 C 1414 620 1474 608 1548 600" stroke="#688660" stroke-width="2.6"/>
+      <path d="M1418 632 q 30 -29 65 -33 q -30 34 -65 33Z" fill="#7d9a70" stroke="none"/>
+      <path d="M1476 617 q 30 -26 64 -26 q -31 31 -64 26Z" fill="#8ca57e" stroke="none"/>
+      <path d="M1394 641 q 15 -35 42 -52 q -13 41 -42 52Z" fill="#6f8c64" stroke="none"/>
+    </g>
+    <g class="frond fr-3">
+      <path d="M1346 355 C 1270 302 1234 252 1198 184" stroke="#6c8963" stroke-width="2.8"/>
+      <path d="M1290 310 q -40 -25 -77 -25 q 37 32 77 25Z" fill="#819c75" stroke="none"/>
+      <path d="M1258 274 q -36 -21 -72 -17 q 36 27 72 17Z" fill="#8fa982" stroke="none"/>
+      <path d="M1308 332 q -10 -37 -32 -61 q 3 43 32 61Z" fill="#74906a" stroke="none"/>
+    </g>
+    <g class="frond fr-4">
+      <path d="M1446 536 C 1510 500 1558 468 1598 430" stroke="#6c8963" stroke-width="2.2"/>
+      <path d="M1498 506 q 23 -27 51 -37 q -20 34 -51 37Z" fill="#819c75" stroke="none"/>
+      <path d="M1542 477 q 24 -23 50 -26 q -22 28 -50 26Z" fill="#74906a" stroke="none"/>
+    </g>
+    <g class="frond fr-5">
+      <path d="M1444 845 C 1494 814 1532 786 1572 748" stroke="#718d67" stroke-width="2"/>
+      <path d="M1492 816 q 20 -24 45 -30 q -17 29 -45 30Z" fill="#7f9b72" stroke="none"/>
+      <path d="M1530 790 q 18 -20 40 -22 q -18 24 -40 22Z" fill="#8ba57e" stroke="none"/>
+    </g>
+  </g>
+
+  <g class="falling-leaves" fill="#88a079" opacity=".7">
+    <path class="leaf lf1" d="M1006 176 q 13 -7 22 3 q -12 9 -22 -3Z"/>
+    <path class="leaf lf2" d="M1116 337 q 11 -6 19 2 q -10 8 -19 -2Z"/>
+    <path class="leaf lf3" d="M874 476 q 12 -7 21 2 q -11 9 -21 -2Z"/>
+    <path class="leaf lf4" d="M1208 590 q 10 -5 17 2 q -9 7 -17 -2Z"/>
+    <path class="leaf lf5" d="M960 690 q 11 -6 19 2 q -10 8 -19 -2Z"/>
+  </g>
+
+  <g opacity=".22" fill="none" stroke="#61785a" stroke-width="1.2">
+    <path d="M930 820 q 60 -11 120 -2"/>
+    <path d="M1080 858 q 48 -9 96 0"/>
+    <path d="M690 890 q 60 -12 120 -3"/>
+  </g>
+
+  <style>
+    .birds { animation: birds-drift 18s ease-in-out infinite; }
+    .frond { will-change: transform; }
+    .fl-1 { transform-origin: 168px 640px; animation: sway-a 13s ease-in-out infinite; }
+    .fl-2 { transform-origin: 162px 746px; animation: sway-b 16s ease-in-out infinite; }
+    .fl-3 { transform-origin: 170px 500px; animation: sway-a 15s ease-in-out infinite reverse; }
+    .fr-1 { transform-origin: 1354px 510px; animation: sway-b 14s ease-in-out infinite; }
+    .fr-2 { transform-origin: 1354px 660px; animation: sway-a 17s ease-in-out infinite reverse; }
+    .fr-3 { transform-origin: 1346px 355px; animation: sway-b 15s ease-in-out infinite reverse; }
+    .fr-4 { transform-origin: 1446px 536px; animation: sway-a 18s ease-in-out infinite; }
+    .fr-5 { transform-origin: 1444px 845px; animation: sway-b 16s ease-in-out infinite reverse; }
+    .bamboo-right { animation: stalk-sway 20s ease-in-out infinite; transform-origin: 1400px 1000px; }
+    .leaf { animation: leaf-drift 22s linear infinite; }
+    .lf1 { animation-delay: -2s; animation-duration: 25s; }
+    .lf2 { animation-delay: -11s; animation-duration: 29s; }
+    .lf3 { animation-delay: -6s; animation-duration: 23s; }
+    .lf4 { animation-delay: -17s; animation-duration: 31s; }
+    .lf5 { animation-delay: -8s; animation-duration: 27s; }
+
+    @keyframes sway-a {
+      0%, 100% { transform: rotate(-1.15deg) translateX(-2px); }
+      50% { transform: rotate(1.3deg) translateX(3px); }
+    }
+    @keyframes sway-b {
+      0%, 100% { transform: rotate(1.1deg) translateX(2px); }
+      50% { transform: rotate(-1.25deg) translateX(-3px); }
+    }
+    @keyframes stalk-sway {
+      0%, 100% { transform: rotate(-.22deg); }
+      50% { transform: rotate(.28deg); }
+    }
+    @keyframes leaf-drift {
+      0% { transform: translate(0, -40px) rotate(0deg); opacity: 0; }
+      10% { opacity: .75; }
+      60% { transform: translate(46px, 190px) rotate(210deg); opacity: .6; }
+      100% { transform: translate(-18px, 390px) rotate(420deg); opacity: 0; }
+    }
+    @keyframes birds-drift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(18px, -7px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .birds, .frond, .bamboo-right, .leaf { animation: none !important; }
+    }
+  </style>
+</svg>

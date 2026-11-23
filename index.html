@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4eee2">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Must Have">
+  <meta name="description" content="Must Have — локальный калькулятор финансов и заметочник для ближайших планов.">
+  <title>Must Have</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="m4 20 4.6-1.1L19 8.5a2.12 2.12 0 0 0-3-3L5.1 15.9 4 20Z"/><path d="m13.4 7.1 3.5 3.5"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.8h5V7M7 7l.9 13h8.2L17 7M10.4 11v5.5M13.6 11v5.5"/></symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.36a1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.36a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.64 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.64 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.64a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.36 9c.2.6.76 1 1.55 1H21a2 2 0 1 1 0 4h-.09c-.79 0-1.35.4-1.55 1Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V4m0 0 4 4m-4-4L8 8M5 17v3h14v-3"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 5v5h5"/><path d="M4.7 10a8 8 0 1 1 .7 6.3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2"/><path d="M12 7.6V12l3 1.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.3 4.2L19 6.8"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="9.5" r="1.5"/><path d="m5.5 17 5-5 3.5 3.5 2-2 2.5 2.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5c.5 4.7 2.3 6.5 7 7-4.7.5-6.5 2.3-7 7-.5-4.7-2.3-6.5-7-7 4.7-.5 6.5-2.3 7-7Z"/></symbol>
+  </svg>
+
+  <div class="wallpaper" aria-hidden="true">
+    <div class="wallpaper-layer is-active" data-bg-layer="a" data-scene="bamboo">
+      <img class="scene-base" src="assets/backgrounds/bamboo-base.webp" alt="" draggable="false">
+      <img class="scene-motion" src="assets/backgrounds/motion/bamboo.svg" alt="" draggable="false">
+    </div>
+    <div class="wallpaper-layer" data-bg-layer="b" data-scene="bamboo">
+      <img class="scene-base" src="assets/backgrounds/bamboo-base.webp" alt="" draggable="false">
+      <img class="scene-motion" src="assets/backgrounds/motion/bamboo.svg" alt="" draggable="false">
+    </div>
+  </div>
+  <div class="wallpaper-wash" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="app" id="app">
+    <aside class="rail" aria-label="Панель управления">
+      <div class="brand" title="Must Have" aria-label="Must Have">
+        <span class="brand-mark">M</span>
+        <span class="brand-dot"></span>
+      </div>
+
+      <nav class="rail-nav" aria-label="Блоки и инструменты">
+        <button class="rail-btn" type="button" data-open-block="a" aria-pressed="true" title="Блок А. Итого">
+          <span class="rail-letter">А</span><span class="rail-tip">Блок А · Итого</span>
+        </button>
+        <button class="rail-btn" type="button" data-open-block="b" aria-pressed="true" title="Блок Б. Что мне надо">
+          <span class="rail-letter">Б</span><span class="rail-tip">Блок Б · Что мне надо</span>
+        </button>
+        <button class="rail-btn" type="button" data-open-block="c" aria-pressed="true" title="Блок В. Что делаем">
+          <span class="rail-letter">В</span><span class="rail-tip">Блок В · Что делаем</span>
+        </button>
+        <button class="rail-btn rail-btn-test" type="button" id="testBtn" title="Режим тестировщика">
+          <span class="rail-letter">Т</span><span class="rail-tip">Режим тестировщика</span>
+        </button>
+      </nav>
+
+      <div class="rail-bottom">
+        <div class="zoom" aria-label="Масштаб текста">
+          <button class="zoom-btn" type="button" id="zoomIn" aria-label="Увеличить текст" title="Увеличить текст">
+            <svg><use href="#i-plus"></use></svg>
+          </button>
+          <output class="zoom-value" id="zoomValue" aria-live="polite">100%</output>
+          <button class="zoom-btn" type="button" id="zoomOut" aria-label="Уменьшить текст" title="Уменьшить текст">
+            <svg><use href="#i-minus"></use></svg>
+          </button>
+        </div>
+        <button class="rail-btn rail-btn-settings" type="button" id="settingsBtn" title="Дополнительные возможности">
+          <svg><use href="#i-gear"></use></svg><span class="rail-tip">Дополнительные возможности</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="workspace" id="workspace" aria-label="Финансовый план">
+      <section class="card card-c" data-block="c" aria-labelledby="titleC">
+        <header class="card-head">
+          <div class="card-heading">
+            <h2 class="card-title" id="titleC"><span class="block-prefix">В.</span> Что делаем</h2>
+            <p class="card-sub" id="cSub">0 шагов · 0 ₽</p>
+          </div>
+          <div class="card-actions">
+            <button class="icon-btn collapse-btn" type="button" data-collapse="c" aria-label="Свернуть блок В" title="Свернуть">
+              <svg><use href="#i-chevron-up"></use></svg>
+            </button>
+            <button class="icon-btn close-btn" type="button" data-close="c" aria-label="Закрыть блок В" title="Закрыть блок">
+              <svg><use href="#i-close"></use></svg>
+            </button>
+          </div>
+        </header>
+        <div class="card-body">
+          <div class="empty-state" id="stepEmpty">
+            <span class="empty-mark" aria-hidden="true"><svg><use href="#i-spark"></use></svg></span>
+            <p class="empty-title">Разбей большую сумму на шаги</p>
+            <p class="empty-text">Один шаг — одно небольшое действие. Отмечай выполненное, и деньги будут появляться в «Есть сейчас».</p>
+          </div>
+          <div class="item-list" id="stepList" aria-live="polite"></div>
+        </div>
+        <footer class="card-foot">
+          <button class="add-btn" type="button" id="addStepBtn">
+            <svg><use href="#i-plus"></use></svg><span>Создать шаг</span>
+          </button>
+        </footer>
+      </section>
+
+      <section class="card card-a" data-block="a" aria-labelledby="titleA">
+        <header class="card-head">
+          <div class="card-heading">
+            <h2 class="card-title" id="titleA"><span class="block-prefix">А.</span> Итого</h2>
+            <p class="card-sub" id="aSub">Сколько есть и сколько нужно</p>
+          </div>
+          <div class="card-actions">
+            <button class="icon-btn collapse-btn" type="button" data-collapse="a" aria-label="Свернуть блок А" title="Свернуть">
+              <svg><use href="#i-chevron-up"></use></svg>
+            </button>
+            <button class="icon-btn close-btn" type="button" data-close="a" aria-label="Закрыть блок А" title="Закрыть блок">
+              <svg><use href="#i-close"></use></svg>
+            </button>
+          </div>
+        </header>
+        <div class="card-body">
+          <div class="money-row">
+            <label class="money-label" for="haveInput">Сколько есть сейчас</label>
+            <div class="money-input-wrap">
+              <input class="money-input" id="haveInput" name="have" type="text" inputmode="numeric" autocomplete="off" maxlength="6" value="0" aria-describedby="haveHint">
+              <span class="money-currency" aria-hidden="true">₽</span>
+            </div>
+            <p class="hint" id="haveHint">Можно ввести до 6 цифр</p>
+          </div>
+
+          <div class="money-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+
+          <div class="money-row">
+            <span class="money-label">Сколько нужно</span>
+            <div class="money-readonly"><span id="needValue">0</span><span class="money-currency" aria-hidden="true">₽</span></div>
+            <p class="hint" id="needHint">Складывается из желаний в блоке Б</p>
+          </div>
+
+          <div class="goal">
+            <div class="goal-line">
+              <span id="goalPercent">0% цели</span>
+              <span id="goalRemain">Осталось 0 ₽</span>
+            </div>
+            <div class="goal-bar" role="progressbar" aria-labelledby="goalPercent" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="goalBar"><i id="goalFill"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card card-b" data-block="b" aria-labelledby="titleB">
+        <header class="card-head">
+          <div class="card-heading">
+            <h2 class="card-title" id="titleB"><span class="block-prefix">Б.</span> Что мне надо</h2>
+            <p class="card-sub" id="bSub">0 желаний · 0 ₽</p>
+          </div>
+          <div class="card-actions">
+            <button class="icon-btn collapse-btn" type="button" data-collapse="b" aria-label="Свернуть блок Б" title="Свернуть">
+              <svg><use href="#i-chevron-up"></use></svg>
+            </button>
+            <button class="icon-btn close-btn" type="button" data-close="b" aria-label="Закрыть блок Б" title="Закрыть блок">
+              <svg><use href="#i-close"></use></svg>
+            </button>
+          </div>
+        </header>
+        <div class="card-body">
+          <div class="empty-state" id="wishEmpty">
+            <span class="empty-mark" aria-hidden="true"><svg><use href="#i-spark"></use></svg></span>
+            <p class="empty-title">Пока пусто</p>
+            <p class="empty-text">Добавь то, ради чего всё это. Сумма желаний сама попадёт в «Сколько нужно».</p>
+          </div>
+          <div class="item-list" id="wishList" aria-live="polite"></div>
+        </div>
+        <footer class="card-foot">
+          <button class="add-btn" type="button" id="addWishBtn">
+            <svg><use href="#i-plus"></use></svg><span>Создать желание</span>
+          </button>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <div class="save-pill" id="savePill" role="status" aria-live="polite">
+    <span class="save-dot"></span><span id="savePillText">Сохранено локально</span>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <div class="test-banner" id="testBanner" hidden>
+    <span class="test-badge">Т</span>
+    <div class="test-banner-text"><strong>Режим тестировщика</strong><span>Данные изолированы от основного окна</span></div>
+    <button class="mini-btn" type="button" id="testResetBtn">Сбросить настройки</button>
+    <button class="mini-btn mini-btn-close" type="button" id="testCloseBtn">Закрыть окно</button>
+  </div>
+
+  <dialog class="modal" id="wishDialog" aria-labelledby="wishDialogTitle">
+    <form id="wishForm" novalidate>
+      <header class="modal-head">
+        <div>
+          <p class="modal-kicker">Блок Б</p>
+          <h2 class="modal-title" id="wishDialogTitle">Я хочу:</h2>
+        </div>
+        <button class="icon-btn modal-close" type="button" data-close-dialog aria-label="Закрыть окно">
+          <svg><use href="#i-close"></use></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <input type="hidden" id="wishId">
+        <div class="field">
+          <label for="wishName">Название желания</label>
+          <input id="wishName" name="name" type="text" maxlength="54" autocomplete="off" placeholder="Например, новый ноутбук" aria-describedby="wishNameMeta wishNameError">
+          <div class="field-meta" id="wishNameMeta">
+            <span class="field-error" id="wishNameError"></span>
+            <span class="char-count" id="wishNameCount">0 / 54</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="wishDesc">Краткое описание <span class="optional">необязательно</span></label>
+          <textarea id="wishDesc" name="description" maxlength="3000" rows="3" placeholder="Зачем это нужно и что даст" aria-describedby="wishDescMeta"></textarea>
+          <div class="field-meta" id="wishDescMeta">
+            <span class="field-error" id="wishDescError"></span>
+            <span class="char-count" id="wishDescCount">0 / 3000</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="wishPrice">Стоимость</label>
+          <div class="price-field">
+            <input id="wishPrice" name="price" type="text" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="0" aria-describedby="wishPriceMeta wishPriceError">
+            <span>₽</span>
+          </div>
+          <div class="field-meta" id="wishPriceMeta">
+            <span class="field-error" id="wishPriceError"></span>
+            <span class="char-count">до 6 цифр</span>
+          </div>
+        </div>
+      </div>
+      <footer class="modal-foot">
+        <button class="btn btn-ghost" type="button" data-close-dialog>Отмена</button>
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="stepDialog" aria-labelledby="stepDialogTitle">
+    <form id="stepForm" novalidate>
+      <header class="modal-head">
+        <div>
+          <p class="modal-kicker">Блок В</p>
+          <h2 class="modal-title" id="stepDialogTitle">Нужно:</h2>
+        </div>
+        <button class="icon-btn modal-close" type="button" data-close-dialog aria-label="Закрыть окно">
+          <svg><use href="#i-close"></use></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <input type="hidden" id="stepId">
+        <div class="field">
+          <label for="stepName">Как заработать</label>
+          <input id="stepName" name="name" type="text" maxlength="54" autocomplete="off" placeholder="Например, сдать первый макет" aria-describedby="stepNameMeta stepNameError">
+          <div class="field-meta" id="stepNameMeta">
+            <span class="field-error" id="stepNameError"></span>
+            <span class="char-count" id="stepNameCount">0 / 54</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="stepDesc">Описание шага <span class="optional">необязательно</span></label>
+          <textarea id="stepDesc" name="description" maxlength="3000" rows="3" placeholder="Маленькое действие или последовательная стратегия" aria-describedby="stepDescMeta"></textarea>
+          <div class="field-meta" id="stepDescMeta">
+            <span class="field-error" id="stepDescError"></span>
+            <span class="char-count" id="stepDescCount">0 / 3000</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="stepAmount">Сумма заработка</label>
+            <div class="price-field">
+              <input id="stepAmount" name="amount" type="text" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="0" aria-describedby="stepAmountMeta stepAmountError">
+              <span>₽</span>
+            </div>
+            <div class="field-meta" id="stepAmountMeta">
+              <span class="field-error" id="stepAmountError"></span>
+              <span class="char-count">до 6 цифр</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="stepTime">Сколько времени <span class="optional">необязательно</span></label>
+            <input id="stepTime" name="time" type="text" maxlength="40" autocomplete="off" placeholder="2 часа, до пятницы">
+            <div class="field-meta"><span class="field-error"></span><span class="char-count" id="stepTimeCount">0 / 40</span></div>
+          </div>
+        </div>
+        <p class="form-note">Время — просто заметка для планирования, таймера нет.</p>
+      </div>
+      <footer class="modal-foot">
+        <button class="btn btn-ghost" type="button" data-close-dialog>Отмена</button>
+        <button class="btn btn-primary" type="submit">Сохранить</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal modal-small" id="confirmDialog" aria-labelledby="confirmTitle">
+    <div class="confirm-body">
+      <span class="confirm-mark" aria-hidden="true"><svg><use href="#i-trash"></use></svg></span>
+      <h2 class="modal-title" id="confirmTitle">Удалить?</h2>
+      <p class="confirm-text" id="confirmText"></p>
+      <div class="modal-foot">
+        <button class="btn btn-ghost" type="button" id="confirmNo">Нет</button>
+        <button class="btn btn-danger" type="button" id="confirmYes">Да</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal modal-small" id="pinDialog" aria-labelledby="pinTitle">
+    <form id="pinForm">
+      <header class="modal-head">
+        <div>
+          <p class="modal-kicker">Только для проверки</p>
+          <h2 class="modal-title" id="pinTitle">Режим тестировщика</h2>
+        </div>
+        <button class="icon-btn modal-close" type="button" data-close-dialog aria-label="Закрыть окно">
+          <svg><use href="#i-close"></use></svg>
+        </button>
+      </header>
+      <div class="modal-body">
+        <p class="modal-lead">Откроется отдельное окно с чистыми данными. Основной план не изменится.</p>
+        <div class="field">
+          <label for="pinInput">Пароль</label>
+          <div class="pin-wrap">
+            <svg aria-hidden="true"><use href="#i-lock"></use></svg>
+            <input id="pinInput" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="••••" aria-describedby="pinError">
+          </div>
+          <div class="field-meta"><span class="field-error" id="pinError"></span><span class="char-count">4 цифры</span></div>
+        </div>
+        <p class="form-note">Пароль демо-режима: <code>0211</code></p>
+      </div>
+      <footer class="modal-foot">
+        <button class="btn btn-ghost" type="button" data-close-dialog>Отмена</button>
+        <button class="btn btn-primary" type="submit">Открыть</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal modal-settings" id="settingsDialog" aria-labelledby="settingsTitle">
+    <div class="settings-shell">
+      <header class="settings-head">
+        <div>
+          <p class="modal-kicker">Must Have</p>
+          <h2 class="modal-title" id="settingsTitle">Дополнительные возможности</h2>
+        </div>
+        <button class="icon-btn modal-close" type="button" data-close-settings aria-label="Закрыть настройки">
+          <svg><use href="#i-close"></use></svg>
+        </button>
+      </header>
+
+      <div class="settings-tabs" role="tablist" aria-label="Разделы настроек">
+        <button class="settings-tab is-active" type="button" role="tab" id="tabVisual" aria-selected="true" aria-controls="panelVisual" data-tab="visual">Визуал</button>
+        <button class="settings-tab" type="button" role="tab" id="tabArchive" aria-selected="false" aria-controls="panelArchive" data-tab="archive" tabindex="-1">Архив</button>
+      </div>
+
+      <div class="settings-body">
+        <section class="settings-panel" role="tabpanel" id="panelVisual" aria-labelledby="tabVisual" data-panel="visual">
+          <div class="settings-section">
+            <div class="section-head">
+              <div><h3>Цветовая тема</h3><p>Заливка — фон карточек, обводка — акцент, «Т» — цвет текста.</p></div>
+              <span class="section-note">7 тем</span>
+            </div>
+            <div class="theme-grid" id="themeGrid"></div>
+          </div>
+
+          <div class="settings-section">
+            <div class="section-head">
+              <div><h3>Фон</h3><p>Оригинальные акварельные сцены с медленной анимацией. Картинка подстраивается под экран.</p></div>
+              <span class="section-note">6 + свой</span>
+            </div>
+            <div class="bg-grid" id="bgGrid"></div>
+            <input id="customBgInput" class="visually-hidden" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+          </div>
+
+          <div class="settings-section settings-section-row">
+            <div class="section-head">
+              <div><h3>Масштаб текста</h3><p>Размер карточек не меняется — только текст внутри.</p></div>
+            </div>
+            <div class="stepper" aria-label="Масштаб текста">
+              <button class="stepper-btn" type="button" id="settingsZoomOut" aria-label="Уменьшить текст"><svg><use href="#i-minus"></use></svg></button>
+              <output id="settingsZoomValue">100%</output>
+              <button class="stepper-btn" type="button" id="settingsZoomIn" aria-label="Увеличить текст"><svg><use href="#i-plus"></use></svg></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings-panel" role="tabpanel" id="panelArchive" aria-labelledby="tabArchive" data-panel="archive" hidden>
+          <div class="settings-section">
+            <div class="section-head"><div><h3>Локальные данные</h3><p>Всё хранится в этом браузере. Облака и аккаунтов нет.</p></div></div>
+            <dl class="data-stats">
+              <div><dt>Желания</dt><dd id="archiveWishes">0</dd></div>
+              <div><dt>Шаги</dt><dd id="archiveSteps">0</dd></div>
+              <div><dt>Сохранено</dt><dd id="archiveSaved">—</dd></div>
+              <div><dt>Хранилище</dt><dd id="archiveMode">Основное</dd></div>
+            </dl>
+            <div class="archive-actions">
+              <button class="btn btn-soft" type="button" id="exportBtn"><svg><use href="#i-download"></use></svg>Экспорт в JSON</button>
+              <button class="btn btn-soft" type="button" id="importBtn"><svg><use href="#i-upload"></use></svg>Импорт из JSON</button>
+              <input id="importInput" class="visually-hidden" type="file" accept="application/json,.json">
+            </div>
+            <p class="archive-note">Экспорт — резервная копия. Импорт заменит текущие желания и шаги после подтверждения.</p>
+          </div>
+          <div class="settings-section danger-zone">
+            <div class="section-head"><div><h3>Сброс</h3><p>Удаляет желания, шаги и введённые суммы. Темы и фон можно сбросить отдельно.</p></div></div>
+            <button class="btn btn-danger-soft" type="button" id="resetAllBtn">Сбросить все данные</button>
+          </div>
+        </section>
+      </div>
+
+      <footer class="settings-foot">
+        <button class="btn btn-ghost settings-reset" type="button" id="visualResetBtn">Сбросить настройки</button>
+        <div class="settings-foot-actions">
+          <button class="btn btn-ghost" type="button" data-close-settings>Закрыть</button>
+          <button class="btn btn-primary" type="button" id="applyVisualBtn">Применить</button>
+        </div>
+      </footer>
+    </div>
+  </dialog>
+
+  <noscript><div class="noscript">Для работы Must Have нужен включённый JavaScript.</div></noscript>
+  <script defer src="js/app.js"></script>
+</body>
+</html>

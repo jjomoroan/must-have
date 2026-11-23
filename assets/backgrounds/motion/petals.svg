@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation=".7"/></filter>
+  <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="1.6"/></filter>
+  <filter id="wash" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="mist" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="12"/></filter>
+  <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#879c68" stop-opacity=".85"/><stop offset="1" stop-color="#c2cda2" stop-opacity=".7"/></linearGradient>
+  <linearGradient id="petalGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8f3137"/><stop offset=".55" stop-color="#c75f59"/><stop offset="1" stop-color="#e2a18f"/></linearGradient>
+  <linearGradient id="foamGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f7f4e8" stop-opacity="0"/><stop offset=".25" stop-color="#f7f4e8" stop-opacity=".85"/><stop offset=".7" stop-color="#eef2e7" stop-opacity=".65"/><stop offset="1" stop-color="#eef2e7" stop-opacity="0"/></linearGradient>
+  <linearGradient id="mistGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#faf6eb" stop-opacity="0"/><stop offset=".35" stop-color="#faf6eb" stop-opacity=".62"/><stop offset=".7" stop-color="#faf6eb" stop-opacity=".5"/><stop offset="1" stop-color="#faf6eb" stop-opacity="0"/></linearGradient>
+  <radialGradient id="greenWash" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#91a872" stop-opacity=".20"/><stop offset="1" stop-color="#91a872" stop-opacity="0"/></radialGradient>
+  <radialGradient id="redWash" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#b5474b" stop-opacity=".18"/><stop offset="1" stop-color="#b5474b" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+  .fall { animation-name: fall; animation-timing-function: linear; animation-iteration-count: infinite; transform-box: fill-box; transform-origin: center; }
+  .mote { animation: mote 14s ease-in-out infinite; }
+  .rainline { animation-name: rainfall; animation-timing-function: linear; animation-iteration-count: infinite; }
+  .ripple { transform-box: view-box; animation: ripple 8s ease-out infinite; }
+  .foamline { animation: foam 14s ease-in-out infinite; }
+  .glint { animation: glint 8s ease-in-out infinite; }
+  .mistband { animation: mistdrift 30s ease-in-out infinite; }
+  .bird { animation: birddrift 20s ease-in-out infinite; }
+  .washfloat { animation: washfloat 24s ease-in-out infinite; }
+  .hatch { animation: hatchfade 16s ease-in-out infinite; }
+  @keyframes fall {
+    0% { transform: translate(0, -90px) rotate(0deg); opacity: 0; }
+    8% { opacity: .85; }
+    78% { opacity: .6; }
+    100% { transform: translate(var(--dx), 820px) rotate(var(--rot)); opacity: 0; }
+  }
+  @keyframes mote {
+    0%, 100% { transform: translate(0, 0); opacity: .1; }
+    50% { transform: translate(14px, -22px); opacity: .55; }
+  }
+  @keyframes rainfall {
+    0% { transform: translate(0, -40px); opacity: 0; }
+    10% { opacity: .7; }
+    80% { opacity: .35; }
+    100% { transform: translate(-14px, 260px); opacity: 0; }
+  }
+  @keyframes ripple {
+    0% { transform: scale(.32); opacity: 0; }
+    12% { opacity: .75; }
+    72% { opacity: .22; }
+    100% { transform: scale(1.15); opacity: 0; }
+  }
+  @keyframes foam {
+    0%, 100% { transform: translateX(-18px); opacity: .3; }
+    50% { transform: translateX(18px); opacity: .72; }
+  }
+  @keyframes glint {
+    0%, 100% { opacity: .08; transform: scale(.8); }
+    45% { opacity: .7; transform: scale(1.12); }
+  }
+  @keyframes mistdrift {
+    0% { transform: translateX(-80px); opacity: .3; }
+    50% { opacity: .65; }
+    100% { transform: translateX(90px); opacity: .3; }
+  }
+  @keyframes birddrift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -8px); }
+  }
+  @keyframes washfloat {
+    0%, 100% { transform: translate(0, 0) scale(.96); opacity: .035; }
+    50% { transform: translate(16px, -10px) scale(1.06); opacity: .085; }
+  }
+  @keyframes hatchfade {
+    0%, 100% { opacity: .03; }
+    45% { opacity: .22; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fall, .mote, .rainline, .ripple, .foamline, .glint, .mistband, .bird, .washfloat, .hatch { animation: none !important; }
+  }
+</style>
+<ellipse class="washfloat" cx="1220" cy="330" rx="360" ry="310" fill="url(#redWash)" filter="url(#wash)"/>
+<g transform="translate(944 449) rotate(-33) scale(0.84)"><path class="fall" style="--dx:-78px;--rot:300deg;animation-duration:20.7s;animation-delay:-20.1s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(469 432) rotate(32) scale(0.90)"><path class="fall" style="--dx:76px;--rot:300deg;animation-duration:18.2s;animation-delay:-14.0s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(217 284) rotate(2) scale(0.63)"><path class="fall" style="--dx:69px;--rot:640deg;animation-duration:29.8s;animation-delay:-20.5s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(334 371) rotate(47) scale(0.93)"><path class="fall" style="--dx:36px;--rot:520deg;animation-duration:20.2s;animation-delay:-9.8s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(312 297) rotate(24) scale(0.87)"><path class="fall" style="--dx:-112px;--rot:300deg;animation-duration:30.9s;animation-delay:-9.5s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(796 69) rotate(16) scale(0.67)"><path class="fall" style="--dx:84px;--rot:640deg;animation-duration:20.1s;animation-delay:-25.4s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(741 156) rotate(-25) scale(0.83)"><path class="fall" style="--dx:-70px;--rot:400deg;animation-duration:19.3s;animation-delay:-14.8s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(1496 93) rotate(-35) scale(0.71)"><path class="fall" style="--dx:51px;--rot:640deg;animation-duration:26.5s;animation-delay:-23.5s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(1195 152) rotate(37) scale(1.05)"><path class="fall" style="--dx:-63px;--rot:400deg;animation-duration:25.4s;animation-delay:-7.3s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(694 180) rotate(23) scale(0.87)"><path class="fall" style="--dx:-62px;--rot:640deg;animation-duration:23.5s;animation-delay:-23.8s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(296 260) rotate(-19) scale(0.73)"><path class="fall" style="--dx:-56px;--rot:640deg;animation-duration:28.8s;animation-delay:-22.3s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(859 467) rotate(55) scale(0.99)"><path class="fall" style="--dx:-25px;--rot:520deg;animation-duration:18.5s;animation-delay:-26.1s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(1058 249) rotate(-49) scale(0.94)"><path class="fall" style="--dx:-111px;--rot:640deg;animation-duration:19.1s;animation-delay:-9.8s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(930 295) rotate(7) scale(0.80)"><path class="fall" style="--dx:-16px;--rot:520deg;animation-duration:29.9s;animation-delay:-25.1s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(780 210) rotate(-17) scale(0.70)"><path class="fall" style="--dx:70px;--rot:300deg;animation-duration:30.7s;animation-delay:-24.0s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<g transform="translate(697 493) rotate(28) scale(0.82)"><path class="fall" style="--dx:45px;--rot:520deg;animation-duration:23.9s;animation-delay:-19.0s" d="M0 0 C 9 -12 26 -12 35 2 C 27 15 8 13 0 0Z" fill="url(#petalGrad)" opacity=".58" filter="url(#soft2)"/></g>
+<circle class="mote" cx="627" cy="561" r="1.5" fill="#d9a18e" style="animation-delay:-10.6s"/>
+<circle class="mote" cx="732" cy="838" r="1.0" fill="#d9a18e" style="animation-delay:-12.7s"/>
+<circle class="mote" cx="1065" cy="573" r="2.0" fill="#d9a18e" style="animation-delay:-2.4s"/>
+<circle class="mote" cx="554" cy="229" r="1.6" fill="#d9a18e" style="animation-delay:-12.6s"/>
+<circle class="mote" cx="516" cy="556" r="1.2" fill="#d9a18e" style="animation-delay:-11.6s"/>
+<circle class="mote" cx="311" cy="184" r="1.1" fill="#d9a18e" style="animation-delay:-13.1s"/>
+<circle class="mote" cx="1220" cy="817" r="1.6" fill="#d9a18e" style="animation-delay:-2.6s"/>
+<circle class="mote" cx="761" cy="416" r="1.1" fill="#d9a18e" style="animation-delay:-2.6s"/>
+<circle class="mote" cx="368" cy="616" r="1.9" fill="#d9a18e" style="animation-delay:-8.4s"/>
+<circle class="mote" cx="1150" cy="608" r="1.6" fill="#d9a18e" style="animation-delay:-4.3s"/>
+</svg>
